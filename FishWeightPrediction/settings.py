@@ -134,7 +134,7 @@ REST_FRAMEWORK = {
 }
 
 SCHEDULE_INTERVAL_SECONDS = 10 * 60.0   # 10 minutes
-CELERY_BROKER_URL = "redis://localhost:6379"
+CELERY_BROKER_URL = os.environ.get('REDISCLOUD_URL') or "redis://localhost:6379"
 CELERY_BEAT_SCHEDULE = {
     "train-model": {
         "task": "FishWeightPrediction.celery.train",
