@@ -21,7 +21,7 @@ class PredictionModel:
                ) -> float:
         import numpy as np
         
-        if model is None:
+        if self.model is None:
             raise Exception("Model wasn't trained")
         
         enc = np.array([species]).reshape(-1, 1)
