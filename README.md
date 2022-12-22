@@ -109,6 +109,6 @@ Manually triggers the training of the machine learning model and saves it.
 
 This API doesn't need any data to be passed in the request.
 
--- **Path**: `/train`
+- **Path**: `/train`
 - **HTTP method**: `POST`
 - **_Returns_**: `Training complete, model saved` response
